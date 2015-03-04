@@ -35,6 +35,7 @@ public class VenueLoginService : IVenueLoginService
             vlog.VenueLoginRandom = code;
             vlog.VenueLoginHashed = hashed;
             vlog.VenueLoginDateAdded = DateTime.Now;
+            vlog.VenueKey = ven.VenueKey;
             db.Venues.Add(ven);
             db.VenueLogins.Add(vlog);
             db.SaveChanges();

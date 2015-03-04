@@ -14,4 +14,7 @@ public interface IAddShowService
 
     [OperationContract]
     bool addArtist(Artist a);
+
+    [OperationContract]
+    List<Artist> GetArtists();
 }

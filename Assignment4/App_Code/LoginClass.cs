@@ -24,7 +24,7 @@ public class LoginClass
 
         var info = from i in db.VenueLogins
                    where i.VenueLoginUserName.Equals(username)
-                   select new { i.VenueLoginRandom, i.VenueLoginHashed, i.VenueLoginKey };
+                   select new { i.VenueLoginRandom, i.VenueLoginHashed, i.VenueLoginKey, i.VenueKey };
 
         foreach (var u in info)
         {
@@ -32,7 +32,7 @@ public class LoginClass
             dbHash = u.VenueLoginHashed;
             if (u.VenueLoginKey != null)
             {
-                key = (int)u.VenueLoginKey;
+                key = (int)u.VenueKey;
             }
         }
     }

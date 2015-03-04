@@ -20,11 +20,13 @@ public class AddShowService : IAddShowService
             show.ShowTime = s.ShowTime;
             show.ShowDate = s.ShowDate;
             show.ShowTicketInfo = s.ShowTicketInfo;
+            show.ShowDateEntered = s.ShowDateEntered;
+            show.VenueKey = s.VenueKey;
             db.Shows.Add(show);
 
             ShowDetail showDetail = new ShowDetail();
             showDetail.Show = show;
-            showDetail.Artist = sd.Artist;
+            showDetail.ArtistKey = sd.ArtistKey;
             showDetail.ShowDetailArtistStartTime = sd.ShowDetailArtistStartTime;
             showDetail.ShowDetailAdditional = sd.ShowDetailAdditional;
             db.ShowDetails.Add(showDetail);
@@ -44,6 +46,7 @@ public class AddShowService : IAddShowService
         try
         {
             Artist artist = new Artist();
+            artist.ArtistKey = a.ArtistKey;
             artist.ArtistName = a.ArtistName;
             artist.ArtistEmail = a.ArtistEmail;
             artist.ArtistWebPage = a.ArtistWebPage;
@@ -56,5 +59,40 @@ public class AddShowService : IAddShowService
         }
 
         return result;
+    }
+
+    public List<Artist> GetArtists()
+    {
+        var artList = from a in db.Artists
+                      orderby a.ArtistName
+                      select new { a.ArtistName, a.ArtistKey };
+
+        List<Artist> artists = new List<Artist>();
+        foreach (var art in artList)
+        {
+            Artist a = new Artist();
+            a.ArtistName = art.ArtistName;
+            a.ArtistKey = art.ArtistKey;
+            artists.Add(a);
+        }
+        return artists;
+    }
+
+    public List<Show> GetShows()
+    {
+        var showList = from s in db.Shows
+                       orderby s.ShowDate
+                       select new { s.ShowName, s.ShowDate, s.ShowTicketInfo, s.ShowTime };
+
+        List<Show> shows = new List<Show>();
+        foreach (var sh in shows)
+        {
+            Show s = new Show();
+            s.ShowName = sh.ShowName;
+            s.ShowDate = sh.ShowDate;
+            s.ShowTicketInfo = sh.ShowTicketInfo;
+            s.ShowTime = s.ShowTime;
+        }
+        return shows;
     }
 }
