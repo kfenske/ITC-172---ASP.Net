@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FanLoginService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:45099/FanLoginService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:45099/FanLoginService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:45099/FanLoginService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:45099/FanLoginService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFanLoginService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetArtists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtists" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetArtists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtist" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetGenres_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenres" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetGenres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetGenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenre" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetGenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetVenues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenues" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetVenues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenue" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_ArtistShows_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArtistShows" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_ArtistShows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArtistShowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_FollowArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:FollowArtist" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_FollowArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FollowArtistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetFollowedArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowedArtist" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetFollowedArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowedArtistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_FollowGenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:FollowGenre" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_FollowGenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FollowGenreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetFollowedGenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowedGenre" />
+  </wsdl:message>
+  <wsdl:message name="IFanLoginService_GetFollowedGenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowedGenreResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFanLoginService">
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/Register" message="tns:IFanLoginService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/RegisterResponse" message="tns:IFanLoginService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/Login" message="tns:IFanLoginService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/LoginResponse" message="tns:IFanLoginService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArtists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetArtists" message="tns:IFanLoginService_GetArtists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetArtistsResponse" message="tns:IFanLoginService_GetArtists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetArtist" message="tns:IFanLoginService_GetArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetArtistResponse" message="tns:IFanLoginService_GetArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetGenres" message="tns:IFanLoginService_GetGenres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetGenresResponse" message="tns:IFanLoginService_GetGenres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetGenre" message="tns:IFanLoginService_GetGenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetGenreResponse" message="tns:IFanLoginService_GetGenre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetVenues" message="tns:IFanLoginService_GetVenues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetVenuesResponse" message="tns:IFanLoginService_GetVenues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetVenue" message="tns:IFanLoginService_GetVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetVenueResponse" message="tns:IFanLoginService_GetVenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArtistShows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/ArtistShows" message="tns:IFanLoginService_ArtistShows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/ArtistShowsResponse" message="tns:IFanLoginService_ArtistShows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/FollowArtist" message="tns:IFanLoginService_FollowArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/FollowArtistResponse" message="tns:IFanLoginService_FollowArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowedArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetFollowedArtist" message="tns:IFanLoginService_GetFollowedArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetFollowedArtistResponse" message="tns:IFanLoginService_GetFollowedArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowGenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/FollowGenre" message="tns:IFanLoginService_FollowGenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/FollowGenreResponse" message="tns:IFanLoginService_FollowGenre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowedGenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFanLoginService/GetFollowedGenre" message="tns:IFanLoginService_GetFollowedGenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFanLoginService/GetFollowedGenreResponse" message="tns:IFanLoginService_GetFollowedGenre_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFanLoginService" type="tns:IFanLoginService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArtists">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetArtists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArtist">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenres">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetGenres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenre">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenues">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetVenues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArtistShows">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/ArtistShows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FollowArtist">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/FollowArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowedArtist">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetFollowedArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FollowGenre">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/FollowGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowedGenre">
+      <soap:operation soapAction="http://tempuri.org/IFanLoginService/GetFollowedGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FanLoginService">
+    <wsdl:port name="BasicHttpBinding_IFanLoginService" binding="tns:BasicHttpBinding_IFanLoginService">
+      <soap:address location="http://localhost:45099/FanLoginService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

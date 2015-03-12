@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f2febaac-e229-40fa-91aa-24edc0fdc02a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:45099/FanLoginService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FanLoginService.wsdl" MetadataType="Wsdl" ID="7ba61f46-0866-414c-8792-b55b4d1f7ebb" SourceId="1" SourceUrl="http://localhost:45099/FanLoginService.svc?wsdl" />
+    <MetadataFile FileName="FanLoginService1.xsd" MetadataType="Schema" ID="ead2748d-fcae-490a-9025-3152f49ff245" SourceId="1" SourceUrl="http://localhost:45099/FanLoginService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FanLoginService.disco" MetadataType="Disco" ID="281afa45-97b9-4c3d-95a9-8859d4569ca0" SourceId="1" SourceUrl="http://localhost:45099/FanLoginService.svc?disco" />
+    <MetadataFile FileName="FanLoginService3.xsd" MetadataType="Schema" ID="0c4e345d-8e75-47ea-b1bc-d0ee188d2486" SourceId="1" SourceUrl="http://localhost:45099/FanLoginService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FanLoginService.xsd" MetadataType="Schema" ID="9c45a9b2-b360-4240-9262-a72a7051fbbc" SourceId="1" SourceUrl="http://localhost:45099/FanLoginService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FanLoginService2.xsd" MetadataType="Schema" ID="e8f3be59-683b-4953-a5fa-62175f6d2355" SourceId="1" SourceUrl="http://localhost:45099/FanLoginService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
